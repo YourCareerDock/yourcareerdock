@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
-import Navbar from '@/components/Navbar'
+import Sidebar from '@/components/sidebar'
 import { Search, FileText, GraduationCap, Sparkles } from 'lucide-react'
 
 const upcomingFeatures = [
@@ -51,10 +51,10 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Navbar />
+  <div className="min-h-screen bg-slate-50 flex">
+    <Sidebar />
 
-      <div className="max-w-5xl mx-auto px-6 py-10">
+    <div className="flex-1 px-6 py-10 max-w-5xl mx-auto">
         <div className="bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl p-8 text-white mb-8">
           <p className="text-sm text-blue-100 mb-1 flex items-center gap-1.5">
             <Sparkles className="w-4 h-4" /> Welcome back

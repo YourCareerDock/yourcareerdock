@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
-import Navbar from '@/components/Navbar'
+import Sidebar from '@/components/sidebar'
 import { User, Briefcase, Target, BarChart3 } from 'lucide-react'
 
 export default function ProfilePage() {
@@ -70,11 +70,11 @@ export default function ProfilePage() {
     return <div className="min-h-screen flex items-center justify-center text-slate-400">Loading...</div>
   }
 
-  return (
-    <div className="min-h-screen bg-slate-50">
-      <Navbar />
+ return (
+  <div className="min-h-screen bg-slate-50 flex">
+    <Sidebar />
 
-      <div className="max-w-lg mx-auto px-6 py-10">
+    <div className="flex-1 px-6 py-10 max-w-lg mx-auto">
         <h1 className="text-2xl font-semibold text-slate-900 mb-1">Your profile</h1>
         <p className="text-slate-500 mb-6">Keep this up to date for better job matches.</p>
 
